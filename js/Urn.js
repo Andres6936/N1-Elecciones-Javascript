@@ -38,6 +38,10 @@ class Urn {
         this.claire = claire;
         this.obama = obama;
     }
+
+    activateButtonClear() {
+        document.getElementById("clear-urn").disabled = false;
+    }
 }
 
 var frank = new Candidate("Frank", "Underwood", 26, "Independiente");
@@ -65,4 +69,6 @@ function vote (nameOfCandidate) {
         document.getElementById("counter-votes-obama")
             .innerHTML = "N° of votes: " + obama.getVotes();
     }
+
+    urn.activateButtonClear();
 }
