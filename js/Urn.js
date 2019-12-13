@@ -51,18 +51,18 @@ function vote (nameOfCandidate) {
     {
         frank.addVote();
         document.getElementById("counter-votes-frank")
-            .innerHTML = "<p> N° of votes: " + frank.getVotes() + "</p>";
+            .innerHTML = "N° of votes: " + frank.getVotes();
     }
     else if (nameOfCandidate === "Claire")
     {
         claire.addVote();
         document.getElementById("counter-votes-claire")
-            .innerHTML = "<p> N° of votes: " + claire.getVotes() + "</p>";
+            .innerHTML = "N° of votes: " + claire.getVotes();
     }
     else if (nameOfCandidate === "Obama")
     {
         obama.addVote();
         document.getElementById("counter-votes-obama")
-            .innerHTML = "<p> N° of votes: " + obama.getVotes() + "</p>";
+            .innerHTML = "N° of votes: " + obama.getVotes();
     }
 }
