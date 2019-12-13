@@ -4,8 +4,9 @@
     <title>N1-Elecciones-Javascript</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen">
     <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+
+    <script src="js/Urn.js" type="text/javascript"></script>
 
     <!-- Support to Fira Code Font -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css">
@@ -38,6 +39,9 @@
             <p>Cost Campaign: 0</p>
             <p>N° of Votes: 0</p>
 
+            <button type="button" class="button-blue">Percentage Votes</button> <br><br>
+            <button type="button" class="button-blue" onclick="vote('Frank')">Vote</button>
+
         </fieldset>
 
         <fieldset id="div-second-candidate">
@@ -52,6 +56,9 @@
             <p>Cost Campaign: 0</p>
             <p>N° of Votes: 0</p>
 
+            <button type="button" class="button-blue">Percentage Votes</button> <br><br>
+            <button type="button" class="button-blue" onclick="vote('Claire')">Vote</button>
+
         </fieldset>
 
         <fieldset id="div-third-candidate">
@@ -65,6 +72,9 @@
             <p>Political Party: Alternativo<br></p>
             <p>Cost Campaign: 0</p>
             <p>N° of Votes: 0</p>
+
+            <button type="button" class="button-blue">Percentage Votes</button> <br><br>
+            <button type="button" class="button-blue" onclick="vote('Obama')">Vote</button>
 
         </fieldset>
     </section>
@@ -82,9 +92,10 @@
         <fieldset>
             <legend>Opciones</legend>
 
-            <button type="button" class="button-red">Vaciar Urna</button>
-            <button type="button" class="button-blue">Opción 1</button>
-            <button type="button" class="button-blue">Opción 2</button>
+            <button type="button" class="button-red" id="clear-urn">Vaciar Urna</button>
+            <button type="button" class="button-blue" id="option-1">Opción 1</button>
+            <button type="button" class="button-blue" id="option-2">Opción 2</button>
+
         </fieldset>
     </section>
 </main>
