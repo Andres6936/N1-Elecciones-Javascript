@@ -19,6 +19,10 @@ class Candidate {
     addVote(){
         this.votes = this.votes + 1;
     }
+
+    getVotes(){
+        return this.votes;
+    }
 }
 
 class Urn {
@@ -45,18 +49,20 @@ var urn = new Urn(frank, claire, obama);
 function vote (nameOfCandidate) {
     if(nameOfCandidate === "Frank")
     {
-        console.log("Frank");
         frank.addVote();
-
+        document.getElementById("counter-votes-frank")
+            .innerHTML = "<p> N° of votes: " + frank.getVotes() + "</p>";
     }
     else if (nameOfCandidate === "Claire")
     {
-        console.log("Claire");
         claire.addVote();
+        document.getElementById("counter-votes-claire")
+            .innerHTML = "<p> N° of votes: " + claire.getVotes() + "</p>";
     }
     else if (nameOfCandidate === "Obama")
     {
-        console.log("Obama");
         obama.addVote();
+        document.getElementById("counter-votes-obama")
+            .innerHTML = "<p> N° of votes: " + obama.getVotes() + "</p>";
     }
 }
