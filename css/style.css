@@ -6,7 +6,7 @@ html
     font-family: 'Fira Code', monospace;
     font-variant-ligatures: contextual;
     font-size: 12px;
-    line-height: 1;
+    line-height: 0.6;
 }
 
 section
