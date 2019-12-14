@@ -23,6 +23,14 @@ class Candidate {
     getVotes(){
         return this.votes;
     }
+
+    resetCostCampaign(){
+        this.costCampaign = 0;
+    }
+
+    resetVotes(){
+        this.votes = 0;
+    }
 }
 
 class Urn {
@@ -37,10 +45,33 @@ class Urn {
         this.frank = frank;
         this.claire = claire;
         this.obama = obama;
+
+        // Create a list with the candidates
+        this.candidates = [this.frank, this.claire, this.obama];
     }
 
     activateButtonClear() {
         document.getElementById("clear-urn").disabled = false;
+    }
+
+    disableButtonClear() {
+        document.getElementById("clear-urn").disabled = true;
+    }
+
+    /**
+     * Update the label {N° of votes: } of candidate.
+     * @param id Type: String Need the ID for update the label.
+     * @param candidate Type: Candidate Need the candidato for update the label.
+     */
+    updateLabelCounterVotes(id, candidate){
+        document.getElementById(id).innerText = "N° of votes: " + candidate.getVotes();
+    }
+
+    clearUrn() {
+        for(var candidate of this.candidates) {
+            candidate.resetCostCampaign();
+            candidate.resetVotes();
+        }
     }
 }
 
@@ -54,21 +85,27 @@ function vote (nameOfCandidate) {
     if(nameOfCandidate === "Frank")
     {
         frank.addVote();
-        document.getElementById("counter-votes-frank")
-            .innerHTML = "N° of votes: " + frank.getVotes();
+        urn.updateLabelCounterVotes("counter-votes-frank", frank);
     }
     else if (nameOfCandidate === "Claire")
     {
         claire.addVote();
-        document.getElementById("counter-votes-claire")
-            .innerHTML = "N° of votes: " + claire.getVotes();
+        urn.updateLabelCounterVotes("counter-votes-claire", claire);
     }
     else if (nameOfCandidate === "Obama")
     {
         obama.addVote();
-        document.getElementById("counter-votes-obama")
-            .innerHTML = "N° of votes: " + obama.getVotes();
+        urn.updateLabelCounterVotes("counter-votes-obama", obama);
     }
 
     urn.activateButtonClear();
+}
+
+function clearUrn() {
+    urn.clearUrn();
+    urn.disableButtonClear();
+
+    urn.updateLabelCounterVotes("counter-votes-frank", frank);
+    urn.updateLabelCounterVotes("counter-votes-claire", claire);
+    urn.updateLabelCounterVotes("counter-votes-obama", obama);
 }
