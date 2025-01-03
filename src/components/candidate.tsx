@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {Button} from "./components/button.tsx";
+import {Button} from "@/components/button.tsx";
 
 type Props = {
     imageUrl: string,

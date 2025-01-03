@@ -1,4 +1,4 @@
-import {Candidate} from "@/candidate.tsx";
+import {Candidate} from "@/components/candidate.tsx";
 import {Button} from "@/components/button.tsx";
 
 export default function Page() {
