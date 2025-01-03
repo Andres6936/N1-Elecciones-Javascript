@@ -1,18 +1,7 @@
-import {StrictMode} from 'react'
-import {createRoot} from 'react-dom/client'
-import {Candidate} from "./candidate.tsx";
-import './style.css'
-import '@master/css';
-import {Button} from "./components/button.tsx";
+import {Candidate} from "@/candidate.tsx";
+import {Button} from "@/components/button.tsx";
 
-createRoot(document.getElementById('root')!).render(
-    <StrictMode>
-        <App/>
-    </StrictMode>,
-)
-
-
-function App() {
+export default function Page() {
     return (
         <main className="flex flex:1 flex:col gap:1rem justify-content:center align-items:center h:100vh w:100vw">
             <section id="banner">
