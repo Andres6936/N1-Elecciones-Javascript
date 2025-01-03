@@ -55,7 +55,7 @@ function App() {
             </section>
 
             <section className="flex w:full justify-content:center align-items:center" id="section-options">
-                <fieldset>
+                <fieldset className="px:1rem py:0.5rem">
                     <legend>Opciones</legend>
 
                     <button type="button" className="button-red" id="clear-urn" disabled>Vaciar

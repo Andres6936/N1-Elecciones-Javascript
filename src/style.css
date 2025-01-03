@@ -51,27 +51,6 @@ img.center
 
 /* Buttons */
 
-button
-{
-    border: none;
-    border-radius: 1em;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    width: 100%;
-    display: inline-block;
-}
-
-button:disabled
-{
-    /* It happens that although the button is disabled,
-    still affects him, the effect of :hover, so we
-    must prevent such that event occurs */
-    pointer-events: none;
-
-    background-color: white;
-    color: #CCCCCC;
-}
-
 .button-blue
 {
     background-color: dodgerblue;
