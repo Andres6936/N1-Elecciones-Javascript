@@ -13,10 +13,10 @@ export function Candidate({imageUrl, name, lastName, age, party, costCampaign}: 
     const [votes, setVotes] = useState(0);
 
     return (
-        <fieldset id="div-first-candidate">
+        <fieldset className="p:1rem" id="div-first-candidate">
             <legend>Candidate {name}</legend>
 
-            <img src={imageUrl} alt={name} width="160" height="200" className="center"/>
+            <img src={imageUrl} alt={name} width="160" height="200" className="center pb:1rem"/>
 
             <p>Name: {name}</p>
             <p>Last Name: {lastName}</p>

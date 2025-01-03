@@ -13,12 +13,12 @@ createRoot(document.getElementById('root')!).render(
 
 function App() {
     return (
-        <>
+        <main className="flex flex:1 flex:col gap:1rem justify-content:center align-items:center h:100vh w:100vw">
             <section id="banner">
                 <img src="images/Encabezado.jpg" alt="Banner"/>
             </section>
 
-            <section id="section-candidate">
+            <section className="flex flex:row gap:0.5rem" id="section-candidate">
                 <Candidate
                     imageUrl={"images/Francis.jpg"}
                     name={"Frank"}
@@ -45,8 +45,8 @@ function App() {
                 />
             </section>
 
-            <section id="section-totals">
-                <fieldset>
+            <section className="flex w:full justify-content:center align-items:center" id="section-totals">
+                <fieldset className="px:1rem py:0.5rem">
                     <legend>Totales</legend>
 
                     <p>Total Votos: </p>
@@ -54,7 +54,7 @@ function App() {
                 </fieldset>
             </section>
 
-            <section id="section-options">
+            <section className="flex w:full justify-content:center align-items:center" id="section-options">
                 <fieldset>
                     <legend>Opciones</legend>
 
@@ -66,6 +66,6 @@ function App() {
 
                 </fieldset>
             </section>
-        </>
+        </main>
     )
 }
