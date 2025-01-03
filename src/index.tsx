@@ -3,6 +3,7 @@ import {createRoot} from 'react-dom/client'
 import {Candidate} from "./candidate.tsx";
 import './style.css'
 import '@master/css';
+import {Button} from "./components/button.tsx";
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
@@ -58,12 +59,15 @@ function App() {
                 <fieldset className="px:1rem py:0.5rem">
                     <legend>Opciones</legend>
 
-                    <button type="button" className="button-red" id="clear-urn" disabled>Vaciar
-                        Urna
-                    </button>
-                    <button type="button" className="button-blue" id="option-1">Opción 1</button>
-                    <button type="button" className="button-blue" id="option-2">Opción 2</button>
-
+                    <Button variant="danger" id="clear-urn" disabled>
+                        Vaciar Urna
+                    </Button>
+                    <Button id="option-1">
+                        Opción 1
+                    </Button>
+                    <Button id="option-2">
+                        Opción 2
+                    </Button>
                 </fieldset>
             </section>
         </main>

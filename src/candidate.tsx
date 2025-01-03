@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {Button} from "./components/button.tsx";
 
 type Props = {
     imageUrl: string,
@@ -26,8 +27,12 @@ export function Candidate({imageUrl, name, lastName, age, party, costCampaign}: 
             <p>Cost Campaign: {costCampaign}</p>
             <p id="counter-votes-frank">N° of Votes: {votes}</p>
 
-            <button type="button" className="button-blue mt:1rem mb:0.5rem py:0.2rem w:full r:0.5rem transition-duration:350ms">Percentage Votes</button>
-            <button type="button" className="button-blue py:0.2rem w:full r:0.5rem transition-duration:350ms" onClick={() => setVotes(votes + 1)}>Vote</button>
+            <Button className="mt:1rem mb:0.5rem">
+                Percentage Votes
+            </Button>
+            <Button onClick={() => setVotes(votes + 1)}>
+                Vote
+            </Button>
 
         </fieldset>
     )
