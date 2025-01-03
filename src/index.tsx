@@ -1,6 +1,7 @@
 import {StrictMode} from 'react'
 import {createRoot} from 'react-dom/client'
 import './style.css'
+import {Candidate} from "./candidate.tsx";
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
@@ -17,62 +18,33 @@ function App() {
             </section>
 
             <section id="section-candidate">
-                <fieldset id="div-first-candidate">
-                    <legend>Candidate Frank</legend>
-
-                    <img src="images/Francis.jpg" alt="Obama" width="160" height="200" className="center"/>
-
-                    <p>Name: Frank</p>
-                    <p>Last Name: Underwood</p>
-                    <p>Age: 26</p>
-                    <p>Political Party:</p>
-                    <p>Independiente</p>
-                    <p>Cost Campaign: 0</p>
-                    <p id="counter-votes-frank">N° of Votes: 0</p>
-
-                    <button type="button" className="button-blue">Percentage Votes</button>
-                    <br/><br/>
-                    <button type="button" className="button-blue">Vote</button>
-
-                </fieldset>
-
-                <fieldset id="div-second-candidate">
-                    <legend>Candidate Claire</legend>
-
-                    <img src="images/Claire.jpg" alt="Obama" width="160" height="200" className="center"/>
-
-                    <p>Name: Claire</p>
-                    <p>Last Name: Underwood</p>
-                    <p>Age: 37</p>
-                    <p>Political Party:</p>
-                    <p>Revolucionario</p>
-                    <p>Cost Campaign: 0</p>
-                    <p id="counter-votes-claire">N° of Votes: 0</p>
-
-                    <button type="button" className="button-blue">Percentage Votes</button>
-                    <br/><br/>
-                    <button type="button" className="button-blue">Vote</button>
-
-                </fieldset>
-
-                <fieldset id="div-third-candidate">
-                    <legend>Candidate Obama</legend>
-
-                    <img src="images/Obama.jpg" alt="Obama" width="160" height="200" className="center"/>
-
-                    <p>Name: Barack</p>
-                    <p>Last Name: Obama</p>
-                    <p>Age: 35</p>
-                    <p>Political Party:</p>
-                    <p>Alternativo</p>
-                    <p>Cost Campaign: 0</p>
-                    <p id="counter-votes-obama">N° of Votes: 0</p>
-
-                    <button type="button" className="button-blue">Percentage Votes</button>
-                    <br/><br/>
-                    <button type="button" className="button-blue">Vote</button>
-
-                </fieldset>
+                <Candidate
+                    imageUrl={"images/Francis.jpg"}
+                    name={"Frank"}
+                    lastName={"Underwood"}
+                    age={42}
+                    party={"Independiente"}
+                    votes={0}
+                    costCampaign={0}
+                />
+                <Candidate
+                    imageUrl={"images/Claire.jpg"}
+                    name={"Claire"}
+                    lastName={"Underwood"}
+                    age={37}
+                    party={"Revolucionario"}
+                    votes={0}
+                    costCampaign={0}
+                />
+                <Candidate
+                    imageUrl={"images/Obama.jpg"}
+                    name={"Barack"}
+                    lastName={"Obama"}
+                    age={35}
+                    party={"Alternativo"}
+                    votes={0}
+                    costCampaign={0}
+                />
             </section>
 
             <section id="section-totals">
