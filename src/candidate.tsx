@@ -1,14 +1,17 @@
+import {useState} from "react";
+
 type Props = {
     imageUrl: string,
     name: string,
     lastName: string,
     age: number,
     party: string,
-    votes: number,
     costCampaign: number,
 }
 
-export function Candidate({imageUrl, name, lastName, age, party, votes, costCampaign}: Props) {
+export function Candidate({imageUrl, name, lastName, age, party, costCampaign}: Props) {
+    const [votes, setVotes] = useState(0);
+
     return (
         <fieldset id="div-first-candidate">
             <legend>Candidate {name}</legend>
@@ -25,7 +28,7 @@ export function Candidate({imageUrl, name, lastName, age, party, votes, costCamp
 
             <button type="button" className="button-blue">Percentage Votes</button>
             <br/><br/>
-            <button type="button" className="button-blue">Vote</button>
+            <button type="button" className="button-blue" onClick={() => setVotes(votes + 1)}>Vote</button>
 
         </fieldset>
     )

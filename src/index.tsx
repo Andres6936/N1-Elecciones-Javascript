@@ -24,7 +24,6 @@ function App() {
                     lastName={"Underwood"}
                     age={42}
                     party={"Independiente"}
-                    votes={0}
                     costCampaign={0}
                 />
                 <Candidate
@@ -33,7 +32,6 @@ function App() {
                     lastName={"Underwood"}
                     age={37}
                     party={"Revolucionario"}
-                    votes={0}
                     costCampaign={0}
                 />
                 <Candidate
@@ -42,7 +40,6 @@ function App() {
                     lastName={"Obama"}
                     age={35}
                     party={"Alternativo"}
-                    votes={0}
                     costCampaign={0}
                 />
             </section>
