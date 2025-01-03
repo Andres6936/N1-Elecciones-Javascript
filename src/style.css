@@ -1,9 +1,6 @@
-/* Support to Fira Code Font*/
-@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css);
-
 html
 {
-    font-family: 'Fira Code', monospace;
+    font-family: system-ui;
     font-variant-ligatures: contextual;
     font-size: 12px;
     line-height: 0.6;
