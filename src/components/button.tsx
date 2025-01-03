@@ -1,11 +1,11 @@
-import {type ComponentPropsWithRef} from "react";
+import React, {type ComponentPropsWithRef} from "react";
 import clsx from "clsx";
 
 type Props = ComponentPropsWithRef<"button"> & {
     variant?: "primary" | "danger"
 }
 
-export function Button({className, children, variant = "primary", ...props}: Props) {
+const Button = React.memo(function ({className, children, variant = "primary", ...props}: Props) {
     return (
         <button
             {...props}
@@ -18,4 +18,7 @@ export function Button({className, children, variant = "primary", ...props}: Pro
             {children}
         </button>
     )
-}
+})
+
+Button.displayName = "Button";
+export {Button};
